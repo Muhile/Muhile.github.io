@@ -10,9 +10,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="">
     <script src=""></script>
+    <style>
+        .modal-header,
+        h4,
+        .close {
+            background-color: #5cb85c;
+            color: white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+
+    </style>
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -21,23 +37,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-                <a href="/" class="navbar-brand">MUHILE</a>
+                <a href="frontpage.html" class="navbar-brand">MUHILE</a>
             </div>
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="frontpage.html">Home</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="comingsoonpage.html">Angular Projects</a></li>
                             <li><a href="comingsoonpage.html">Ruby on rails project</a></li>
-                            <li><a href="comingsoonpage.html">Project 3</a></li>
+                            <li><a href="modalpage.html">Project 3</a></li>
+                            <li><a href="scrollpage.html">Scroll Page</a></li>
                         </ul>
                     </li>
                     <li><a href="contactpage.html">Contact</a></li>
                     <li><a href="blogpage.html">Blog</a></li>
-                    <li><a href="https://github.com/Muhile">GitHub</a></li>
+                    <li><a href="https://github.com/Muhile" data-toggle="tooltip" title="Click to check out my Github Page">GitHub</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -51,22 +68,62 @@
                             </div>
                         </div>
                     </form>
-                    <li><a href="#">Sign in</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#" id="myBtn">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-        </ul>
+    <!-- The rest of the body -->
+    <div class="container">
+
+
+
+        <div class="col-md-8">
+            <h1>Please Contact me for more information</h1>
+            <form class="form-horizontal">
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Linkdin</p>
+            </div>
+        </div>
     </div>
+    
+     <script>
+        $(document).ready(function() {
+            $("#myBtn").click(function() {
+                $("#myModal").modal();
+            });
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
 </body>
 
 </html>
