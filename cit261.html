@@ -7,13 +7,7 @@
   <link rel="stylesheet" href="indexstyle.css">
   <script src="js/myScript.js"></script>
   <title>CIT261</title>
-  <style>
-    var canvas = document.getElementById("myCanvas");
-    var drw = canvas.getContext("2d");
-    drw.fillStyle = "#008080";
-    drw.fillRect(0, 0, 100, 80);
 
-  </style>
 </head>
 
 <body>
@@ -51,7 +45,9 @@
   <h4>Canvas</h4>
   <p>This is a sample of my canvas.</p><br>
 
-  <canvas id="myCanvas" width="600" height="400" style="border: 1px solid #003333"></canvas>
+  <canvas id="myCanvas" width="600" height="400" style="border:1px solid #003333;">
+    Your browser does not support the canvas element.
+  </canvas>
 </body>
 
 </html>
