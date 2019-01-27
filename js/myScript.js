@@ -1,4 +1,4 @@
 var canvas = document.getElementById("myCanvas");
-var drw = canvas.getContext("2d");
-drw.fillStyle = "#008080";
-drw.fillRect(0, 0, 100, 80);
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#008080";
+ctx.fillRect(0, 0, 100, 80);
