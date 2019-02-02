@@ -1,4 +1,9 @@
-ul {
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar Settings */
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,11 +11,11 @@ ul {
     overflow: hidden;
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display: block;
     width: 60px;
     text-align: center;
@@ -19,7 +24,23 @@ li a {
     color: #666;
 }
 
-li a:hover {
+nav li a:hover {
     background-color: darkcyan;
     color: white;
+}
+
+
+#guitarvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+ul {
+
+    margin: 0;
+    padding: 0;
+
 }
