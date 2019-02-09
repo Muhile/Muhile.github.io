@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexstyle.css">
+    <title>Week 5</title>
+    <style>
+
+        p{
+            font-size: 20px;
+        }
+
+    </style>
+
+    <script>
+        function largeText(){
+            var n = document.getElementsByClassName("paragraph");
+            n[0].style.fontSize='35px';
+        }
+        
+        function smallText(){
+            var n = document.getElementsByClassName("paragraph");
+            n[0].style.fontSize='10px';
+        }
+        
+        function normalText(){
+            var n = document.getElementsByClassName("paragraph");
+            n[0].style.fontSize='20px';
+        }
+        
+        function nightmode(){
+            var m = document.getElementsByClassName("nero");
+            m[0].style.backgroundColor='black';
+            m[0].style.color='white';
+        }
+        
+        function daymode(){
+            var m = document.getElementsByClassName("nero");
+            m[0].style.backgroundColor='white';
+            m[0].style.color='black';
+        }
+        
+    </script>
+</head>
+
+<body class="nero">
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="../cit261.html">CIT 261</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>Welcome to Week 5 Assignment</h1>
+
+    </div>
+
+
+
+    <h2>Manipulating CSS Class Properties Using JavaScript</h2>
+    <p>For this weeks fluency evidence, I used javascript to manipulate the CSS class styles.</p>
+    <p class="paragraph">The buttons below change the size of the font. One increases the size, another decreases the size and the last one returns it back to normal. This could be used to help accomodate different sights.</p>
+
+    <button type="button" onclick="smallText()">Small Font</button>
+    <button type="button" onclick="normalText()">Normal Font</button>
+    <button type="button" onclick="largeText()">Large Font</button>
+
+    <p>The buttons below are simple buttons that changes the webpage from day mode to nightmode and vice versa.This manipulates the body background and the color of the font It is just a simple change, click to view changes.</p>
+
+    <button type="button" onclick="nightmode()">Night Mode</button>
+    <button type="button" onclick="daymode()">Day Mode</button>
+
+
+
+
+</body>
+
+</html>
