@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexstyle.css">
+
+    <title>Week 6</title>
+
+    <style>
+        .color {
+            background: red;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: example 5s linear infinite;
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        @keyframes example {
+
+            0% {
+                background-color: red;
+                left: 0px;
+
+            }
+
+            15% {
+                background-color: orange;
+                left: 200px;
+            }
+
+            30% {
+                background-color: yellow;
+                left: 400px;
+
+            }
+
+            45% {
+                background-color: green;
+                left: 600px;
+            }
+
+            60% {
+                background-color: skyblue;
+                left: 400px;
+
+            }
+
+            75% {
+                background-color: indigo;
+                left: 200px;
+            }
+
+            100% {
+                background-color: violet;
+                left: 0px;
+
+            }
+        }
+
+        .slide {
+            background: red;
+            width: 200px;
+            height: 200px;
+            transition: width 2s;
+        }
+
+        .sliding {
+            background: green;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: ;
+        }
+
+        @keyframes glide {
+            from {
+                left: 0px;
+                top: 0px;
+            }
+
+            to {
+                left: 200px;
+                top: 0px;
+            }
+        }
+
+    </style>
+
+    <script>
+        function slider() {
+            var bax = document.getElementById("box");
+            bax.style.width = "500px";
+        }
+
+        function gliding() {
+            var bex = document.getElementById("box2")
+            bex.style.animation = "glide 2s"
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="cit261.html">CIT 261</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="header">
+        <h1>Week 6 Assignment</h1>
+        <h2>CSS Transitions and Animation triggered with JavaScript</h2>
+        <p>For this weeks fluency evidence, I am triggering CSS transitions and animations using JavaScript</p>
+
+    </div>
+
+    <div id="box" class="slide" onClick="slider()"></div><br>
+    <div id="box2" class="sliding" onClick="gliding()"></div><br>
+    <div class="color">
+        <p>Sale!</p>
+    </div>
+</body>
+
+</html>
