@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexstyle.css">
+    <title>Week 9</title>
+
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="cit261.html">CIT 261</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="header">
+        <h1>Week 9 Assignment</h1>
+        <h2>JSON</h2>
+        <p>For this weeks fluency evidence, I am showing my fluency in JSOn and Ajax.</p>
+
+        <div>
+            <label for="name">Fruit Name</label>
+            <input type="text" id="fruitname"><br><br>
+            <label for="color">Fruit Color</label>
+            <input type="text" id="fruitcolor"><br><br>
+            <label for="type">Fruit Type</label>
+            <input type="text" id="fruittype"><br><br>
+
+            <button id="demo">Stringify</button><br><br>
+        </div>
+
+
+        <textarea rows="8" cols="100" id="object">
+        </textarea>
+
+
+
+        <script>
+            var jsObj = new Object();
+
+            document.getElementById("demo").addEventListener("click", myFunction0);
+
+            function myFunction0() {
+                jsObj.name = document.getElementById("fruitname").value;
+                jsObj.color = document.getElementById("fruitcolor").value;
+                jsObj.type = document.getElementById("fruittype").value;
+
+
+                document.getElementById("object").innerHTML = JSON.stringify(jsObj);
+            }
+
+        </script>
+    </div>
+
+    <script src="../js/myScript.js"></script>
+</body>
+
+</html>

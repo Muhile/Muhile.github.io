@@ -23,18 +23,19 @@
     </nav>
 
 
-    <div class="header">
+    <div class="Main">
         <h1>Week 9 Assignment</h1>
-        <h2>JSON</h2>
-        <p>For this weeks fluency evidence, I am showing my fluency in JSOn and Ajax.</p>
 
+        <p>For this weeks fluency evidence, I am showing my fluency in JSOn and Ajax.</p>
+        <h2>JSON</h2>
+        <p>In this example, I am simulating a car dealership program in which we are going to "add" a car to the database</p>
         <div>
-            <label for="name">Fruit Name</label>
-            <input type="text" id="fruitname"><br><br>
-            <label for="color">Fruit Color</label>
-            <input type="text" id="fruitcolor"><br><br>
-            <label for="type">Fruit Type</label>
-            <input type="text" id="fruittype"><br><br>
+            <label for="name">Manufacturer</label>
+            <input type="text" id="manufct"><br><br>
+            <label for="color">Model</label>
+            <input type="text" id="mdl"><br><br>
+            <label for="type">Price</label>
+            <input type="text" id="prce"><br><br>
 
             <button id="demo">Stringify</button><br><br>
         </div>
@@ -43,20 +44,40 @@
         <textarea rows="8" cols="100" id="object">
         </textarea>
 
+        <p>In this section, we are going to pull raw data of cars from the car dealership's "database" (this is a JSON file in this website)</p>
 
+        <button id="demo02">Get raw data (aka JSON file)</button><br><br>
+
+        <textarea rows="8" cols="100" id="object02">
+        </textarea>
 
         <script>
             var jsObj = new Object();
 
             document.getElementById("demo").addEventListener("click", myFunction0);
+            document.getElementById("demo02").addEventListener("click", myFunction02);
 
             function myFunction0() {
-                jsObj.name = document.getElementById("fruitname").value;
-                jsObj.color = document.getElementById("fruitcolor").value;
-                jsObj.type = document.getElementById("fruittype").value;
+                jsObj.manufacturer = document.getElementById("manufct").value;
+                jsObj.model = document.getElementById("mdl").value;
+                jsObj.price = document.getElementById("prce").value;
 
 
                 document.getElementById("object").innerHTML = JSON.stringify(jsObj);
+            }
+
+            function myFunction02() {
+                //                var xhttp = new XMLHttpRequest();
+                //                xhttp.onreadystatechange = function() {
+                //                    if (this.readyState == 4 && this.status == 200) {
+                //                        document.getElementById("object02").innerHTML = this.responseText;
+                //                    }
+                //                };
+                //                xhttp.open("GET", "../js/cars.json", true);
+                //                xhttp.send();
+
+                var requestURL = ''
+                https: //muhile.github.io/learning-area/javascript/oojs/json/superheroes.json';';
             }
 
         </script>
