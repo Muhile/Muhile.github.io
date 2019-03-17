@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexstyle.css">
+    <title>Week 10</title>
+    <script>
+        function myFunction() {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(document.getElementById("item").value);
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
+        }
+        
+        function myFunction02() {
+            var newItem = document.createElement("LI");
+            var textnode = document.createTextNode(document.getElementById("item").value);
+            newItem.appendChild(textnode);
+
+            var list = document.getElementById("myList");
+            list.insertBefore(newItem, list.childNodes[0]);
+        }
+
+        function removeLi() {
+            var child = document.getElementById("myList");
+            child.parentNode.removeChild(child);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="cit261.html">CIT 261</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="main">
+        <h1>Week 10 Assignment (Local Storage and DOM)</h1>
+
+        <p>For this week's fluency evidence, I am showing my fluency in local storage and DOM.</p>
+
+
+        <h2>DOM</h2>
+        <p>This section will show fluency for manipulation of the page using createElement, appendChild and insertBefore. You can add an item to the shopping list either to the top, using the fisrt item button, or to the bottom of the list, using the last item button.</p>
+
+
+        <ul id="myList">
+            <li>Biscuits</li>
+            <li>Eggs</li>
+        </ul>
+
+        <button onclick="removeLi()">Delete Shopping List </button><br><br>
+
+        <p>Click the button to add an item to the bottom of the shopping list.</p>
+
+        <input type='text' id='item'><br><br>
+        <button onclick="myFunction()">Last Item </button>
+        <button onclick="myFunction02()">First Item</button>
+
+        <h2>Local Storage</h2>
+        <p>This area will show the fluency for local storage</p>
+
+        <div>
+            <label for="sport">Favorite sport</label>
+            <input type="text" id="favSport"><br><br>
+            <label for="car">Favorite Car</label>
+            <input type="text" id="favCar"><br><br>
+            <label for="Food">Favorite Food</label>
+            <input type="text" id="favFood"><br><br>
+
+            <button id="demo">Store Favorites</button><br><br>
+        </div>
+
+
+        <textarea rows="8" cols="100" id="object">
+        </textarea><br><br>
+        <button id="sport">Retrieve Favorite Sport</button>
+        <button id="car">Retrieve Favorite Car </button>
+        <button id="food">Retrieve Favorite Food</button>
+
+
+        <script>
+            var myJSON
+            var jsObj = new Object();
+
+            document.getElementById("demo").addEventListener("click", myFunction0);
+            document.getElementById("sport").addEventListener("click", myFunction03);
+            document.getElementById("car").addEventListener("click", myFunction04);
+            document.getElementById("food").addEventListener("click", myFunction05);
+
+            function myFunction0() {
+                jsObj.name = document.getElementById("favSport").value;
+                jsObj.color = document.getElementById("favCar").value;
+                jsObj.type = document.getElementById("favFood").value;
+                myJSON = JSON.stringify(jsObj);
+                localStorage.setItem("mytime", myJSON);
+            }
+
+            function myFunction03() {
+                text = localStorage.getItem("mytime");
+                obj = JSON.parse(text);
+                document.getElementById("object").innerHTML = obj.name;
+            }
+
+            function myFunction04() {
+                text = localStorage.getItem("mytime");
+                obj = JSON.parse(text);
+                document.getElementById("object").innerHTML = obj.color;
+            }
+
+            function myFunction05() {
+                text = localStorage.getItem("mytime");
+                obj = JSON.parse(text);
+                document.getElementById("object").innerHTML = obj.type;
+            }
+
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
