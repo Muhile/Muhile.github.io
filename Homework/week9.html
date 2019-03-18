@@ -83,7 +83,7 @@
                         document.getElementById("object02").innerHTML = this.responseText;
                     }
                 };
-                request.open('GET', requestURL);
+                request.open('GET', requestURL, true);
                 request.responseType = 'json';
                 request.send();
 
