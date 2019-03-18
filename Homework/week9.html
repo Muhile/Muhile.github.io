@@ -28,7 +28,9 @@
 
         <p>For this weeks fluency evidence, I am showing my fluency in JSOn and Ajax.</p>
         <h2>JSON</h2>
+        <h3>JSON Stringify</h3>
         <p>In this example, I am simulating a car dealership program in which we are going to "add" a car to the database</p>
+
         <div>
             <label for="name">Manufacturer</label>
             <input type="text" id="manufct"><br><br>
@@ -40,78 +42,60 @@
             <button id="demo">Stringify</button><br><br>
         </div>
 
-
-        <textarea rows="8" cols="100" id="object">
+        <textarea rows="8" cols="50" id="object">
         </textarea>
 
-        <p>In this section, we are going to pull raw data of cars from the car dealership's "database" (this is a JSON file in this website)</p>
+        <h3>JSON Stringify</h3>
+        <p>In this section, we are going to parse a txt data already in the code. Click the button to see the data.</p>
 
-        <button id="demo02">Get raw data (aka JSON file)</button><br><br>
+        <p>The dealership received the credit check for Mr. Tony Stark who is buying a car from them. This is the data that they received.</p>
 
+        <textarea rows="8" cols="50" id="object01">
+        </textarea><br><br>
+        <button id="demo01">Read txt data</button><br><br>
+
+        <h2>Ajax</h2>
+        <p>The dealership Just got a programmer who speaks portuguese. Now the dealership can pull car data from a Brazillian API to see what cars are available in Brazil so that they can expand their business there. The data below is in Portugues but the car names should be farmiliar.</p>
         <textarea rows="8" cols="100" id="object02">
         </textarea>
+        <button id="demo02">Get raw data (aka JSON file)</button><br><br>
 
         <script>
             var jsObj = new Object();
+            var jsonFile;
 
             document.getElementById("demo").addEventListener("click", myFunction0);
+            document.getElementById("demo01").addEventListener("click", myFunction01);
             document.getElementById("demo02").addEventListener("click", myFunction02);
 
             function myFunction0() {
                 jsObj.manufacturer = document.getElementById("manufct").value;
                 jsObj.model = document.getElementById("mdl").value;
                 jsObj.price = document.getElementById("prce").value;
-
-
                 document.getElementById("object").innerHTML = JSON.stringify(jsObj);
             }
 
-            function myFunction02() {
 
-                // read in data
-                // display data in #data spot
+
+            function myFunction01() {
+                var txt = '{"name":"Tony Stark", "creditScore":"825", "Accept":"yes"}'
+                var obj = JSON.parse(txt);
+                document.getElementById("object01").innerHTML = "Name: " +
+                    obj.name + "\nCredit Score: " + obj.creditScore + "\nGood Credit: " + obj.Accept;
+            }
+
+            function myFunction02() {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        theJSON = this.responseText;
-                        document.getElementById("object02").innerHTML = theJSON;
+                        jsonFile = this.responseText;
+                        document.getElementById("object02").innerHTML = jsonFile;
                     }
                 };
-                xhttp.open("GET", "https://github.com/Muhile/Muhile.github.io/blob/master/js/cars.json", true);
+                xhttp.open("GET", "https://parallelum.com.br/fipe/api/v1/carros/marcas", true);
                 xhttp.send();
 
             }
-
-            function myFunction2() {
-                obj = JSON.parse(theJSON);
-                byId("pretty").innerHTML = obj[0].post_title + "\n" + obj[0].plaintext;
-                console.log(obj);
-
-            }
-
-            //            function myFunction02() {
-            //                //                var xhttp = new XMLHttpRequest();
-            //                //                xhttp.onreadystatechange = function() {
-            //                //                    if (this.readyState == 4 && this.status == 200) {
-            //                //                        document.getElementById("object02").innerHTML = this.responseText;
-            //                //                    }
-            //                //                };
-            //                //                xhttp.open("GET", "../js/cars.json", true);
-            //                //                xhttp.send();
-            //
-            //                //                var requestURL = "https://github.com/Muhile/Muhile.github.io/blob/master/js/cars.json";
-            //                var requestURL = "https://parallelum.com.br/fipe/api/v1/carros/marcas"
-            //                var request = new XMLHttpRequest();
-            //                request.onreadystatechange = function() {
-            //                    if (this.readyState == 4 && this.status == 200) {
-            //                        document.getElementById("object02").innerHTML = this.responseText;
-            //                    }
-            //                };
-            //                request.open('GET', requestURL, true);
-            //                request.responseType = 'json';
-            //                request.send();
-            //
-            //            }
 
         </script>
     </div>
