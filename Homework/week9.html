@@ -76,8 +76,17 @@
                 //                xhttp.open("GET", "../js/cars.json", true);
                 //                xhttp.send();
 
-                var requestURL = ''
-                https: //muhile.github.io/learning-area/javascript/oojs/json/superheroes.json';';
+                var requestURL = 'https://github.com/Muhile/Muhile.github.io/blob/master/js/cars.json';
+                var request = new XMLHttpRequest();
+                request.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("object02").innerHTML = this.responseText;
+                    }
+                };
+                request.open('GET', requestURL);
+                request.responseType = 'json';
+                request.send();
+
             }
 
         </script>
