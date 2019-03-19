@@ -5,9 +5,120 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../indexstyle.css">
-    <title>Week 9</title>
+    <title>Week 7 & 8</title>
 
+    <style>
+        .droptarget00 {
+            float: left; 
+            width: 80px; 
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        
+        table, th, td{
+            
+            width: 150px;
+            height: 20px; 
+            margin: 15px;
+            border: 1px solid #aaaaaa;
+        }
+        
+        td{
+            padding-left: 5px;
+        }
+    </style>
 
+    <script>
+        function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+
+        
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+        }
+        
+        function myFunction02() {
+            var destination = ["1.Asia", "2.Africa", "3.USA", "4.Australia", "5.Europe"];
+            var text00 = "";
+            var i;
+            for (i = 0; i < destination.length; i++) {
+                text00 += destination[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text00;
+
+        }
+
+        function myFunction01() {
+            var x = document.getElementById("choice").value;
+            switch (x) {
+                case "1":
+                    var destinationAsia = ["1.Tokyo", "2.Thailand", "3.China"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < destinationAsia.length; i++) {
+                        text += destinationAsia[i] + "<br>";
+                    }
+                    document.getElementById("demo01").innerHTML = text;
+                    alert("You chose Asia! Here are some of the Countries in Asia");
+                    break;
+                case "2":
+                    var destinationAfrica = ["Kenya", "Egypt", "Tanzania"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < destinationAfrica.length; i++) {
+                        text += destinationAfrica[i] + "<br>";
+                    }
+                    document.getElementById("demo01").innerHTML = text;
+                    alert("You chose Africa! Here are some of the Countries in Africa");
+                    break;
+                case "4":
+                    var destinationAustralia = ["Sydney", "Adelaide", "Melbourne"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < destinationAustralia.length; i++) {
+                        text += destinationAustralia[i] + "<br>";
+                    }
+                    document.getElementById("demo01").innerHTML = text;
+                    alert("You chose Australia! Here are some of the Countries in Australia");
+                    break;
+                case "3":
+                    var destinationUSA = ["Alabama", "Alaska", "Florida", "California"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < destinationUSA.length; i++) {
+                        text += destinationUSA[i] + "<br>";
+                    }
+                    document.getElementById("demo01").innerHTML = text;
+                    alert("You chose USA! Here are some of the states in USA");
+                    break;
+                case "5":
+                    var destinationEurope = ["London", "Finland", "France", "Germany", "Spain", "Rome"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < destinationEurope.length; i++) {
+                        text += destinationEurope[i] + "<br>";
+                    }
+                    document.getElementById("demo01").innerHTML = text;
+                    alert("You chose Europe! Here are some of the Countries in Europe");
+                    break;
+                default:
+                    text = "No cities found";
+            }
+
+            document.getElementById("demo01").innerHTML = text;
+        }
+
+    </script>
 </head>
 
 <body>
@@ -23,46 +134,75 @@
     </nav>
 
 
-    <div class="header">
-        <h1>Week 9 Assignment</h1>
-        <h2>JSON</h2>
-        <p>For this weeks fluency evidence, I am showing my fluency in JSOn and Ajax.</p>
+    <div class="Main">
+        <h1>Week 7 & 8 Assignment</h1>
+        <h2>JavaScript</h2>
+        <p>For this weeks fluency evidence, I am showing my fluency in JavaScript emphasizing on loops, conditional statements, functions, variables, parameters, arrays, JavaScript oobjects, methods, and JavaScript events.</p>
+        <p>Learn the major cities in these Continents</p>
+
+        <button onclick="myFunction02()" id="button01">Display Continents</button>
+
+        <p id="demo"></p>
 
         <div>
-            <label for="name">Fruit Name</label>
-            <input type="text" id="fruitname"><br><br>
-            <label for="color">Fruit Color</label>
-            <input type="text" id="fruitcolor"><br><br>
-            <label for="type">Fruit Type</label>
-            <input type="text" id="fruittype"><br><br>
-
-            <button id="demo">Stringify</button><br><br>
+            <p>Enter the number for the continent of your choice and click the "Get Countries" button</p>
+            <input type="text" id="choice">
+            <button onclick="myFunction01()">Get Countries</button>
         </div>
 
+        <p id="demo01"></p>
 
-        <textarea rows="8" cols="100" id="object">
-        </textarea>
+        <p>Drag and match the right continent and country/city from the options below.</p>
 
+        <table>
+            <tr>
+                <th>Continent</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 
+            </tr>
+            <tr>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 
-        <script>
-            var jsObj = new Object();
+            </tr>
+            <tr>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 
-            document.getElementById("demo").addEventListener("click", myFunction0);
+            </tr>
+            <tr>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 
-            function myFunction0() {
-                jsObj.name = document.getElementById("fruitname").value;
-                jsObj.color = document.getElementById("fruitcolor").value;
-                jsObj.type = document.getElementById("fruittype").value;
+            </tr>
+            <tr>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                <td class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 
+            </tr>
+        </table>
 
-                document.getElementById("object").innerHTML = JSON.stringify(jsObj);
-            }
+        <div class="droptarget00" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget0">Africa</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget1">Asia</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget2">Europe</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget3">USA</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget4">Australia</p>
+        </div>
+        <div class="droptarget00" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget5">India</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget6">Rexburg</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget7">Kenya</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget8">Sydney</p>
+            <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget9">Paris</p>
+        </div>
 
-        </script>
     </div>
 
-    <script src="../js/myScript.js"></script>
 </body>
 
 </html>
