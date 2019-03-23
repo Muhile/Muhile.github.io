@@ -9,113 +9,161 @@
     <title>Week 6</title>
 
     <style>
-        .color {
-            background: red;
-            width: 200px;
-            height: 200px;
-            position: relative;
-            animation: example 5s linear infinite;
-            text-align: center;
-            color: black;
-            font-size: 50px;
-            border-radius: 50%;
-            display: inline-block;
+        /* *************************************
+        Spinning letters animation styling  
+ ***************************************** */
+        #spin {
+            color: red;
         }
 
-        @keyframes example {
+        #spin:after {
+            content: "the Mobile Application Development CIT 261 Class where creative meets code";
+            animation: spin 5s linear;
+        }
 
+        @keyframes spin {
             0% {
-                background-color: red;
-                left: 0px;
-
+                content: "the";
             }
 
-            15% {
-                background-color: orange;
-                left: 200px;
+            10% {
+                content: "Mobile ";
+            }
+
+            20% {
+                content: "Application";
             }
 
             30% {
-                background-color: yellow;
-                left: 400px;
-
+                content: "Development";
             }
 
-            45% {
-                background-color: green;
-                left: 600px;
+            40% {
+                content: "Class";
+            }
+
+            50% {
+                content: "CIT 261";
             }
 
             60% {
-                background-color: skyblue;
-                left: 400px;
-
+                content: "where";
             }
 
-            75% {
-                background-color: indigo;
-                left: 200px;
+            70% {
+                content: "creative";
+            }
+
+            80% {
+                content: "meets";
+            }
+
+            90% {
+                content: "code";
             }
 
             100% {
-                background-color: violet;
-                left: 0px;
-
+                content: "the Mobile Application Development CIT 261 Class where creative meets code";
             }
         }
 
-        .slide {
-            background: red;
-            width: 200px;
-            height: 200px;
-            transition: width 2s;
-        }
 
-        .sliding {
-            background: green;
-            width: 200px;
-            height: 200px;
+        /* *************************************
+      Slideshow image animation styling  
+***************************************** */
+
+        .slideshow {
             position: relative;
-            animation: ;
-        }
-
-        .move {
-            background: #ff6600;
-            width: 200px;
+            width: 300px;
             height: 200px;
-            position: relative;
-            animation: ;
 
+            border: .125em solid black;
+            padding: .5em;
+            margin: 0 auto;
         }
 
-        @keyframes glide {
+        .slideshow img {
+            position: absolute;
+            animation: fade-out 8s infinite alternate;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 10s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .slideshow img:nth-child(3) {
+            animation-delay: 0s;
+        }
+
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        /* *************************************
+        Marque animation styling  
+        ***************************************** */
+
+        @keyframes marquee {
             from {
-                left: 0px;
-                top: 0px;
+                margin-left: 0;
             }
 
             to {
-                left: 300px;
-                top: 0px;
+                margin-left: -650px;
             }
+        }
+
+
+        #text {
+            animation-name: marquee;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+
+        .row img {
+            transition: transform 1s;
+        }
+
+        .row img:hover {
+            transform: scale(2);
+        }
+
+        #box2 {
+            transition: transform 1s;
+        }
+
+        #box3 {
+            transition: transform 1s;
+        }
+
+        #box2:hover {
+            transform: skewX(-20deg);
+        }
+
+        #box3:hover {
+            transform: skewX(20deg);
         }
 
     </style>
 
     <script>
+        /* *************************************
+        Transition  
+        ***************************************** */
         function slider() {
             var bax = document.getElementById("box");
             bax.style.width = "500px";
-        }
-
-        function gliding() {
-            var bex = document.getElementById("box2")
-            bex.style.animation = "glide 2s"
-        }
-
-        function moving() {
-            var bex = document.getElementById("box3")
-            bex.style.animation = "glide 2s"
         }
 
     </script>
@@ -134,21 +182,40 @@
     </nav>
 
 
-    <div class="header">
+    <div class="main">
         <h1>Week 6 Assignment</h1>
-        <h2>CSS Transitions and Animation triggered with JavaScript</h2>
-        <p>For this weeks fluency evidence, I am triggering CSS transitions and animations using JavaScript</p>
-        <p>When you click on the boxes, you will trigger the animation/transition for the box</p>
+        <h2>CSS Transitions, transformations, Animations and triggering some with JavaScript</h2>
+        <p>For this weeks fluency evidence, I have a couple of animations, transitions and transformations. Some of those are triggered using JavaScript</p>
+
+
+        <span id="text">For this weeks fluency evidence, I am triggering CSS transitions and animations using JavaScript</span>
+
+        <h2>Welcome to <span id="spin"></span></h2>
+        <div>
+            <p>This is a slideshow of nature pictures.</p>
+            <div class="slideshow">
+                <img src="https://source.unsplash.com/300x200/?droning,drone">
+                <img src="https://source.unsplash.com/300x200/?nature,autumn">
+                <img src="https://source.unsplash.com/300x200/?nature,water">
+            </div>
+
+        </div>
 
     </div>
+    <p>Clicking the image below will enlarge it.</p>
+    <img id="box" src="https://source.unsplash.com/300x200/?nature,waterfall" onClick="slider()">
 
-    <div id="box" class="slide" onClick="slider()"></div><br>
-    <div id="box2" class="sliding" onClick="gliding()"></div><br>
-    <div class="color">
-        <p>Sale!</p>
-    </div><br><br>
-    <div id="box3" class="move"></div><br>
-    <button onClick="moving()">Click me</button>
+    <p>Hover on the images below to enlarge them.</p>
+    <div class="row">
+        <img src="https://source.unsplash.com/100x100/?nature,mountain">
+        <img src="https://source.unsplash.com/100x100/?nature,water">
+        <img src="https://source.unsplash.com/100x100/?nature,winter">
+        <img src="https://source.unsplash.com/100x100/?nature,autumn">
+    </div>
+    <p>Hover on the image below to see the image tilt.</p>
+    <img id="box2" src="https://source.unsplash.com/300x200/?animal,flamingo">
+    <img id="box3" src="https://source.unsplash.com/300x200/?nature,spring">
+
 
 </body>
 
