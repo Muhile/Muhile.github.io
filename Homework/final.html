@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexstyle.css">
+    <title>Sweet Tooth Cafe and Bakery</title>
+    <style>
+        /* *************************************
+        Spinning letters animation styling  
+        ***************************************** */
+        #spin {
+            color: #ac3b61;
+            ;
+        }
+
+        #spin:after {
+            content: "Welcome to our cafe and bakery";
+            animation: spin 5s linear;
+        }
+
+        @keyframes spin {
+            0% {
+                content: "Welcome";
+            }
+
+            10% {
+                content: "To ";
+            }
+
+            20% {
+                content: "Sweet";
+            }
+
+            30% {
+                content: "Tooth";
+            }
+
+            40% {
+                content: "Cafe";
+            }
+
+            50% {
+                content: "where";
+            }
+
+            60% {
+                content: "Tooth";
+            }
+
+            70% {
+                content: "meets";
+            }
+
+            80% {
+                content: "Sweet";
+            }
+
+            100% {
+                content: "Welcome to our cafe and bakery";
+            }
+        }
+
+        /* *************************************
+                 Page styling  
+        ***************************************** */
+
+        body {
+            background: #eee2dc;
+            font-family: "Times New Roman", Georgia, Serif;
+            /*            margin: 0;*/
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navbar Settings */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #123c69;
+            overflow: hidden;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            width: 60px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #bab2b5;
+        }
+
+        nav li a:hover {
+            background-color: #eee2dc;
+            color: #ac3b61;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        .rows {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            flex-direction: row;
+        }
+
+        .piccolumn {
+            float: left;
+            width: 100%;
+        }
+
+        .piccolumn img {
+            opacity: 0.6;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: 0.3s;
+            width: auto;
+            height: 100%;
+
+        }
+
+        .piccolumn img:hover {
+            opacity: 2;
+
+        }
+
+        /* *************************************
+                  Modal styling  
+        ***************************************** */
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="cit261.html">CIT 261</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>Sweet Tooth Cafe and Bakery</h1>
+        <h2><span id="spin"></span></h2>
+    </div>
+
+    <div class="main">
+
+
+        <!-- Photo grid -->
+        <div class="rows">
+            <div class="piccolumn">
+                <img id="myImg" src="https://source.unsplash.com/300x200/?food,cookies" onclick="makeModal(this.id)" alt="This is one of the type of cookies that we serve at our cafe">
+                <img id="myImg01" src="https://source.unsplash.com/300x200/?food,pie" onclick="makeModal(this.id)" alt="This is one of the pies that we serve at our cafe">
+                <img id="myImg02" src="https://source.unsplash.com/300x200/?food,brownie" onclick="makeModal(this.id)" alt="This is one of the type of brownies that we serve at our cafe">
+            </div>
+
+
+            <div class="piccolumn">
+                <img id="myImg03" src="https://source.unsplash.com/300x200/?food,pudding" onclick="makeModal(this.id)" alt="This is one of the type of pudding that we serve at our cafe">
+                <img id="myImg04" src="https://source.unsplash.com/300x200/?food,iceream" onclick="makeModal(this.id)" alt="This is one of the type of icream that we serve at our cafe">
+                <img id="myImg05" src="https://source.unsplash.com/300x200/?food,cake" onclick="makeModal(this.id)" alt="This is one of the cakes that we serve at our cafe">
+            </div>
+
+
+            <div class="piccolumn">
+                <img id="myImg06" src="https://source.unsplash.com/300x200/?food,dessert" onclick="makeModal(this.id)" alt="One of the desserts that we serve">
+                <img id="myImg07" src="https://source.unsplash.com/300x200/?food,cinnamon" onclick="makeModal(this.id)" alt="If you like cinnamon, this is for you">
+                <img id="myImg08" src="https://source.unsplash.com/300x200/?food,yogurt" onclick="makeModal(this.id)" alt="This is one of the yogurts that we serve at our cafe">
+            </div>
+
+
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+    </div>
+    <script src="../js/myScript.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        function makeModal(id) {
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById(id);
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
