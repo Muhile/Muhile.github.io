@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Display:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Red Hat Display";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
@@ -63,13 +63,18 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#summary" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -116,19 +121,31 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
     
   
 </form>
@@ -155,6 +172,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
@@ -214,6 +236,8 @@
         <a href="../about/about/" class="md-tabs__link">
           
   
+    
+  
   About
 
         </a>
@@ -232,6 +256,8 @@
         <a href="../projects/projects/" class="md-tabs__link">
           
   
+    
+  
   Projects
 
         </a>
@@ -249,6 +275,8 @@
       <li class="md-tabs__item">
         <a href="../blog/" class="md-tabs__link">
           
+  
+    
   
   Blog
 
@@ -305,23 +333,6 @@
     
   
   Contact
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../tags/" class="md-tabs__link">
-        
-  
-    
-  
-  Tags
 
       </a>
     </li>
@@ -394,6 +405,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
       
@@ -486,6 +503,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -548,6 +573,10 @@
   
   
     
+    
+      
+        
+      
     
     
       
@@ -619,6 +648,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
       
@@ -719,6 +754,14 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+    
     
       
       
@@ -735,16 +778,24 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Blog
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
@@ -753,27 +804,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../blog/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Blog
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -838,6 +868,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Resume
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -847,6 +888,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      TECHNICAL SKILLS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#professional-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROFESSIONAL EXPERIENCE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROFESSIONAL EXPERIENCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#university-of-missouri-system-nov-2022-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      University Of Missouri System Nov 2022 – Present
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midwayusa-jan-2021-nov-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      MidwayUSA Jan 2021 – Nov 2022
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-saws-run-llc-oct-2018-jan-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      See-Saws-Run, LLC Oct 2018 – Jan 2021
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDUCATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDUCATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#university-of-missouri-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      University of Missouri 2026
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brigham-young-university-idaho-jan-2021-nov-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brigham Young University – Idaho Jan 2021 – Nov 2022
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      CERTIFICATIONS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROJECTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROJECTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-portfolio-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs Portfolio Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homelab-setup-and-self-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homelab Setup and Self-Hosting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-cloud-practitioner-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Cloud Practitioner Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTACT INFORMATION
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -864,26 +1075,6 @@
   
   <span class="md-ellipsis">
     Contact
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tags/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tags
   </span>
   
 
@@ -910,6 +1101,167 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      TECHNICAL SKILLS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#professional-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROFESSIONAL EXPERIENCE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROFESSIONAL EXPERIENCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#university-of-missouri-system-nov-2022-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      University Of Missouri System Nov 2022 – Present
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midwayusa-jan-2021-nov-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      MidwayUSA Jan 2021 – Nov 2022
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-saws-run-llc-oct-2018-jan-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      See-Saws-Run, LLC Oct 2018 – Jan 2021
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDUCATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EDUCATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#university-of-missouri-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      University of Missouri 2026
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brigham-young-university-idaho-jan-2021-nov-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brigham Young University – Idaho Jan 2021 – Nov 2022
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      CERTIFICATIONS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROJECTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROJECTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-portfolio-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs Portfolio Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homelab-setup-and-self-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homelab Setup and Self-Hosting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-cloud-practitioner-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Cloud Practitioner Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTACT INFORMATION
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -923,9 +1275,104 @@
                   
 
 
-  <h1>Resume</h1>
+<h1 style="text-align: center;">HANSEN MUHILE</h1>
 
-
+<h2 id="summary">SUMMARY<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>Experienced System Administrator with a background in supporting ETL and BI teams. Skilled in systems administration, IT operations, and help desk support. Dedicated to continuous learning and always looking for ways to improve and add value to my team and organization.</p>
+<hr />
+<h2 id="technical-skills">TECHNICAL SKILLS<a class="headerlink" href="#technical-skills" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>BI &amp; ETL Platforms</strong>: Tableau, Power BI, IBM Cognos, Informatica PowerCenter</li>
+<li><strong>Programming Languages</strong>: HTML, CSS, JavaScript, Java, SQL, Python (in progress), Yaml</li>
+<li><strong>Cloud Technologies</strong>: AWS, Azure, Power BI Gateway</li>
+<li><strong>Systems &amp; Tools</strong>: Windows, Linux, Active Directory, SQL Developer, SSMS, Zabbix, Git, Docker</li>
+<li><strong>Automation</strong>: Scripting, Process Automation, CI/CD</li>
+<li><strong>Databases</strong>: MySQL, PostgreSQL(in progress)</li>
+<li><strong>Customer Support</strong>: Technical Support, User Training, Troubleshooting, Documentation</li>
+</ul>
+<hr />
+<h2 id="professional-experience">PROFESSIONAL EXPERIENCE<a class="headerlink" href="#professional-experience" title="Permanent link">&para;</a></h2>
+<h3 id="university-of-missouri-system-nov-2022-present">University Of Missouri System <span style="float: right;">Nov 2022 – Present</span><a class="headerlink" href="#university-of-missouri-system-nov-2022-present" title="Permanent link">&para;</a></h3>
+<p><em>System Administrator</em></p>
+<ul>
+<li>Collaborate with internal and external teams to install, configure, upgrade, and maintain ETL &amp; BI tools, including Tableau, Power BI, IBM Cognos and Informatica PowerCenter.</li>
+<li>Led the decommissioning of Tableau, coordinating with stakeholders and users to migrate them to Power BI, resulting in a streamlined BI ecosystem and reducing operational costs.</li>
+<li>Automating key processes and applications reducing manual intervention, setup time and increasing operational efficiency.</li>
+<li>Maintain the Power BI on-premise gateway, ensuring seamless synchronization between on-premise and cloud data, supporting real-time reporting for over 5 campuses.</li>
+<li>Monitor server infrastructure and resource usage, proactively addressing issues and ensuring optimal performance and availability.</li>
+<li>Develop and maintaining comprehensive documentation, reducing troubleshooting time and standardizing application administration.</li>
+</ul>
+<h3 id="midwayusa-jan-2021-nov-2022">MidwayUSA <span style="float: right;">Jan 2021 – Nov 2022</span><a class="headerlink" href="#midwayusa-jan-2021-nov-2022" title="Permanent link">&para;</a></h3>
+<p><em>Help Desk Technician</em></p>
+<ul>
+<li>Provided first-level technical support to employees, diagnosing and resolving hardware and software issues, resulting in a reduced downtime.</li>
+<li>Conducted IT training for all new salaried employees, covering company technology, equipment usage, proper technology conduct, and IT-related policies, leading to a smoother on boarding process.</li>
+<li>Participated in on-call rotations, ensuring 24/7 support and minimizing service interruptions during after-hours.</li>
+<li>Led the technology deployment for a new distribution center, completing the project 2 weeks ahead of schedule, which improved operational readiness and enhanced customer satisfaction.</li>
+<li>Implemented security protocols such as 2FA/MFA across remote workstations and Azure AD, significantly reducing the risk of cyber threats.</li>
+</ul>
+<h3 id="see-saws-run-llc-oct-2018-jan-2021">See-Saws-Run, LLC <span style="float: right;">Oct 2018 – Jan 2021</span><a class="headerlink" href="#see-saws-run-llc-oct-2018-jan-2021" title="Permanent link">&para;</a></h3>
+<p><em>IT Support Specialist</em></p>
+<ul>
+<li>Provided technical support, resolving a wide range of technical issues.</li>
+<li>Maintained and configured printers, resulting in more efficient operations and reduced delays in product shipments.</li>
+<li>Conducted cost-effective research to procure new laptops and peripherals, reducing IT supply costs and improving the quality of the equipment.</li>
+</ul>
+<hr />
+<h2 id="education">EDUCATION<a class="headerlink" href="#education" title="Permanent link">&para;</a></h2>
+<h3 id="university-of-missouri-2026">University of Missouri <span style="float: right;">2026</span><a class="headerlink" href="#university-of-missouri-2026" title="Permanent link">&para;</a></h3>
+<p><em>Master of Business Administration (MBA)</em></p>
+<ul>
+<li>Certificate: Marketing Analytics</li>
+</ul>
+<h3 id="brigham-young-university-idaho-jan-2021-nov-2022">Brigham Young University – Idaho <span style="float: right;">Jan 2021 – Nov 2022</span><a class="headerlink" href="#brigham-young-university-idaho-jan-2021-nov-2022" title="Permanent link">&para;</a></h3>
+<p><em>Bachelor of Science in Computer Information Technology</em></p>
+<p>Pursued and earned my undergraduate degree in Computer Information Technology and learned technical skills in the following areas:</p>
+<ul>
+<li>Databases</li>
+<li>Networking</li>
+<li>Programming</li>
+<li>System Administration</li>
+<li>Cyber Security</li>
+<li>Application Development</li>
+<li>Web Development</li>
+</ul>
+<p>Activities and societies: BYU-I CSA</p>
+<hr />
+<h2 id="certifications">CERTIFICATIONS<a class="headerlink" href="#certifications" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Microsoft Certified: Azure Fundamentals</strong> – Microsoft, [2023]</li>
+<li><strong>LPI Linux Essentials</strong> – LPI, [2022]</li>
+<li><strong>CompTIA Network+</strong> - CompTIA, [2022]</li>
+<li><strong>CompTIA A+</strong> - CompTIA, [2021]</li>
+</ul>
+<hr />
+<h2 id="projects">PROJECTS<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h2>
+<h3 id="mkdocs-portfolio-website">MkDocs Portfolio Website<a class="headerlink" href="#mkdocs-portfolio-website" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Developed a personal portfolio website using MkDocs to showcase my technical projects and skills.  </li>
+<li><strong>Technologies Used:</strong> Visual Studio Code, MkDocs, Python, GitHub Pages, Markdown, Material for MkDocs.  </li>
+<li><strong>Link:</strong> <a href="https://muhile.github.io/" target="_blank">Muhile.github.io</a></li>
+</ul>
+<h3 id="homelab-setup-and-self-hosting">Homelab Setup and Self-Hosting<a class="headerlink" href="#homelab-setup-and-self-hosting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I built and currently maintain a homelab environment, experimenting with a variety of open-source technologies to manage and secure a personal network and self-hosted services.  </li>
+<li><strong>Technologies Used:</strong> OPNsense, TrueNAS, Nginx Proxy Manager, Let's Encrypt, Docker, Proxmox.</li>
+</ul>
+<h3 id="aws-cloud-practitioner-practice">AWS Cloud Practitioner Practice<a class="headerlink" href="#aws-cloud-practitioner-practice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Studied and practiced AWS cloud concepts through hands-on experience using a free AWS account.</li>
+<li>Gained experience in key AWS services including EC2, S3, IAM, and RDS.</li>
+<li>Practiced setting up and managing basic cloud infrastructure, implementing security best practices, and managing user permissions.</li>
+<li>Developed a strong understanding of cloud fundamentals, billing, and cost management.</li>
+</ul>
+<hr />
+<h2 id="contact-information">CONTACT INFORMATION<a class="headerlink" href="#contact-information" title="Permanent link">&para;</a></h2>
+<!--- - **Email**: <a href="mailto:hanscheng94@gmail.com" target="_blank">hanscheng94@gmail.com</a> --->
+<ul>
+<li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/hansen-m-b0818175" target="_blank">Hansen Muhile</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/Muhile/" target="_blank">Muhile</a></li>
+</ul>
 
 
 
@@ -946,9 +1393,55 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../techdocs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Technical Documentation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Technical Documentation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../contact/" class="md-footer__link md-footer__link--next" aria-label="Next: Contact">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Contact
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -974,7 +1467,7 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "search.suggest", "search.highlight", "content.code.copy", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.top", "search.share", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
