@@ -25,37 +25,42 @@ Tested:  Jul 3, 2025; Passed on Firefox and Chrome browsers.
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <nav>
+   <nav>
     <div class="navbar">
-       
+      <label for="toggle">&#9776;</label>
+      <input type="checkbox" id="toggle" />
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#projects.html">Projects</a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#projects.html">Projects</a>
-                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                </ul>
-            </li>
-            <li><a href="reflection.html">Reflection</a>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact.html">Contact</a>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
             </ul>
-        
+          </li>
+          <li><a href="reflection.html">Reflection</a>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact.html">Contact</a>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    </nav>
+  </nav>
     <div class="header">
         <h1>Welcome to My Portfolio Website</h1>
     </div>
