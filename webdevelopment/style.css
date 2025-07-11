@@ -1,7 +1,15 @@
 /* style.css */
 
+@font-face { 
+
+font-family: Montserrat; /*this is where we give our font a name so we can use it!*/
+
+src: url("Montserrat\Montserrat-VariableFont_wght.ttf"); /*remember this is how we link to files in CSS!*/
+
+}
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
@@ -126,4 +134,36 @@ html, body {
     max-width: 150px;
     height: 150px;
   }
+}
+
+/* Print styles */
+@media print {
+    @page {
+        margin: 1in;
+    }
+
+    body {
+        background: none !important;
+        color: #000 !important;
+        font-family: Georgia, "Times New Roman", serif !important;
+    }
+
+    .nav,
+    .side,
+    .professional-overview,
+    .certifications,
+    .footer img,
+    .footer a {
+        display: none !important;
+    }
+
+    
+    .header,
+    .main,
+    .about-description,
+    .education-overview,
+    .footer {
+        display: block !important;
+    }
+
 }
