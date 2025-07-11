@@ -93,7 +93,29 @@ html, body {
   background: #ddd;
   font-size: 16px;
   margin-top: auto;
+  background-image: url(usb.jpg);
+  background-size: cover;
 }
+
+/*Footer Icons Animation*/
+.pic {
+    width: 50px;
+    height: 50px;
+}
+
+.picbig {
+    position: absolute;
+    width: 0px;
+    -webkit-transition: width 0.3s linear 0s;
+    transition: width 0.3s linear 0s;
+    z-index: 10;
+
+}
+
+.pic:hover + .picbig {
+    width: 100px;
+}
+
 
 @media screen and (max-width: 640px) {
   .row {
