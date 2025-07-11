@@ -118,8 +118,8 @@ label {
     z-index: 1000;
   }
 
-  .navbar ul li:hover ul {
-    display: block;
+  .navbar ul li ul {
+    display: none !important;
   }
 
   .navbar ul li ul li {
