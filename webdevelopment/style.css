@@ -101,27 +101,30 @@ html, body {
   background: #ddd;
   font-size: 16px;
   margin-top: auto;
-  background-image: url(usb.jpg);
+  background-image: url('usb.jpg');
   background-size: cover;
+  color: #333;
 }
 
-/*Footer Icons Animation*/
-.pic {
-    width: 50px;
-    height: 50px;
+/* Base icon styling */
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 6px;
 }
 
-.picbig {
-    position: absolute;
-    width: 0px;
-    -webkit-transition: width 0.3s linear 0s;
-    transition: width 0.3s linear 0s;
-    z-index: 10;
-
+/* On hover, icons scale slightly for effect */
+.icon:hover {
+  transform: scale(1.4);
 }
 
-.pic:hover + .picbig {
-    width: 100px;
+/* Link and text styling for spacing */
+.footer a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
 /* Table Styling */
@@ -202,6 +205,14 @@ tr:nth-last-child(1) {
     .contact-form button[type="submit"]:hover {
       background-color: #555;
     }
+
+
+    div[id^="web-development"],
+div[id^="system-admin"] {
+  margin-bottom: 40px; /* or adjust as needed */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* optional for subtle separation */
+}
 
 
 
