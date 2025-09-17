@@ -1,0 +1,126 @@
+<!--
+
+*****************************************************************************
+
+Title:  Project Page
+
+Use:  To help with creating webpages for my assignments.
+
+Author:  Hansen Muhile
+
+School/Term:  University of Missouri, Summer 2025
+
+Developed: Jul 13, 2025
+
+Tested:  Jun 29, 2025; Passed on Firefox and Chrome browsers.
+
+******************************************************************************
+
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <label for="toggle">&#9776;</label>
+      <input type="checkbox" id="toggle">
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a>
+            <ul>
+              <li><a href="project.html#web-development">Web Development & Design</a></li>
+              <li><a href="project.html#system-admin">System Administration & Self-Hosting</a></li>
+              <li><a href="project.html#cloud-computing">Cloud Computing & Infrastructure</a></li>
+            </ul>
+          </li>
+          <li><a href="reflection.html">Reflection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="header">
+        <h1>Projects & Experience</h1>
+    </div>
+    <div class="row">
+        <div class="main">
+            <p>This portfolio highlights three key areas: <strong>Development & Design, System Administration & Self-Hosting, and Cloud Computing & Infrastructure</strong>. Each project shows my skills, challenges I faced, what I learned, and what I plan to improve.</p>
+            
+            <div id="web-development">
+                <h3>Competency 1: Web Development & Design</h3>
+
+                <h4>MkDocs Portfolio Website</h4>
+
+                <p><strong>Description:</strong> I created a personal portfolio website using MkDocs to display my technical projects and skills. The website provides a well-organized space where I document my work and learning process. MkDocs makes it easy to write and update content using Markdown, and I added themes and plugins to make the site more visually appealing.</p>
+                <p><strong>Technologies Used:</strong> Visual Studio Code, MkDocs, Python, GitHub Pages, Markdown, Material for MkDocs, CI/CD.</p>
+                <p><strong>Reflection:</strong></p>
+                    <ul>
+                        <li><strong>Strengths:</strong> Simple setup, easy navigation, automatic GitHub updates.</li>
+                        <li><strong>Weaknesses:</strong> Limited design options compared to traditional website builders.</li>
+                        <li><strong>Lessons Learned:</strong> I gained a better understanding of how version control keeps content organized and how static site generators work.</li>
+                        <li><strong>Future Improvements:</strong> I plan to test more MkDocs plugins and find ways to customize the design further.</li>
+                    </ul>
+                
+            </div>
+            
+            <div id="system-admin">
+                <h3>Competency 2: System Administration & Self-Hosting</h3>
+
+                <h4>Home lab Setup and Self-Hosting</h4>
+
+                <p><strong>Description:</strong> I built and maintain a homelab environment where I explore open-source tools to manage and secure a personal network. This project helps me test new software, improve security, and host my own services instead of relying on third-party cloud providers.</p>
+                <p><strong>Technologies Used:</strong> OPNsense, TrueNAS, Nginx Proxy Manager, Let's Encrypt, Docker, Proxmox.</p>
+                <p><strong>Reflection:</strong></p>
+                    <ul>
+                        <li><strong>Strengths:</strong> Hands-on experience managing servers, deeper understanding of networks and security.</li>
+                        <li><strong>Weaknesses:</strong> Requires regular maintenance, and some tools take time to learn.</li>
+                        <li><strong>Lessons Learned:</strong> Security is very important when self-hosting, and automation helps reduce manual work.</li>
+                        <li><strong>Future Improvements:</strong> I want to use more automation tools to make updates and security checks easier.</li>
+                    </ul>
+                
+            </div>
+
+            <div id="cloud-computing">
+                <h3>Competency 3: Cloud Computing & Infrastructure</h3>
+
+                <h4>AWS Cloud Practitioner Practice</h4>
+
+                <p><strong>Description:</strong> I studied AWS cloud computing by using a free AWS account to gain hands-on experience. I explored key AWS services like EC2, S3, IAM, and RDS, learning how cloud infrastructure works, how to keep systems secure, and how to manage costs.</p>
+                <p><strong>Technologies Used:</strong> AWS (EC2, S3, IAM, RDS), AWS Console, CLI.</p>
+                <p><strong>Reflection:</strong></p>
+                    <ul>
+                        <li><strong>Strengths:</strong> Real-world cloud computing practice, better understanding of security and billing.</li>
+                        <li><strong>Weaknesses:</strong> Limited access to advanced AWS features without a paid account, figuring out cost optimization can be tricky.</li>
+                        <li><strong>Lessons Learned:</strong> Proper security settings for user roles are crucial, and managing cloud resources wisely helps avoid unnecessary costs.</li>
+                        <li><strong>Future Improvements:</strong> I plan to continue AWS and Azure certification training and explore more cloud automation tools.</li>
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <p>&copy; 2025 Hansen Muhile |
+      <img class="icon" src="https://img.icons8.com/forma-regular-filled/24/new-post.png" alt="email icon"> hcmndc@umsystem.edu |
+      <img class="icon" src="https://img.icons8.com/android/24/cell-phone.png" alt="phone icon"> +1-888-888-8888
+    </p>
+    <p>
+      <a target="_blank" href="https://icons8.com/icon/jRbMKThMBT8R/email">Email Icon</a> and
+      <a target="_blank" href="https://icons8.com/icon/4310/featurephone">Phone Icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+      Photo by <a href="https://unsplash.com/@alexkixa">Alexandre Debiève</a> on <a href="https://unsplash.com/photos/macro-photography-of-black-circuit-board-FO7JIlwjOtU">Unsplash</a>
+    </p>
+  </div>
+</body>
+</html>

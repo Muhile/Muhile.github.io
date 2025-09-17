@@ -1,1 +1,1 @@
-This is the gh-pages page for my website
+This is the website page for my islt class website
